@@ -68,4 +68,11 @@ vehicle_names <- row.names(mtcars) #assign一堆標籤
 barplot(mtcars$hp, names = vehicle_names, main = "Horse power for each vehicles",xlab = "Horse power",horiz = T, las = 1, cex.names = 0.5) 
 #horiz = T 水平表示 las為X Y標籤的表示方式,cex.names似乎是大小
 
-
+#作業
+par(mfrow = c(2,3))
+plot(x = cars$speed, y = cars$dist, main = "My first scatter plot", xlab = "Speed", ylab = "Dist", sub = "The fasterer a car drives, the longer braking distance is needed.")
+plot(x = cars$speed, y = cars$dist,type="l" , main = "My first scatter plot", xlab = "Speed", ylab = "Dist", sub = "The fasterer a car drives, the longer braking distance is needed.")
+hist(runif(n), main = paste("Distribution of", n, "uniformly distributed variables")) #均一分配
+boxplot(cars$speed, main = "Distribution of speed variable")
+boxplot(cars$dist, main = "Distribution of dist variable")
+barplot(mtcars$hp, names = vehicle_names, main = "Horse power for each vehicles",xlab = "Horse power",horiz = T, las = 1, cex.names = 0.5) 
